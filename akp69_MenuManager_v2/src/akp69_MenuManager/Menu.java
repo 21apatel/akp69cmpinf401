@@ -105,19 +105,19 @@ public class Menu {
 
 		if(dessert != null)
 		{
-			totalCals += totalCals + dessert.getDesCalories();
+			totalCals += dessert.getDesCalories();
 		}
 		if(salad != null)
 		{
-			totalCals += totalCals + salad.getSalCalories();
+			totalCals += salad.getSalCalories();
 		}
 		if(entree != null)
 		{
-			totalCals += totalCals + entree.getEntCalories();
+			totalCals += entree.getEntCalories();
 		}
 		if(side != null)
 		{
-			totalCals += totalCals + side.getSideCalories();
+			totalCals += side.getSideCalories();
 		}
 		return totalCals;
 	}
