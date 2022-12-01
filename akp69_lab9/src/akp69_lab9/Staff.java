@@ -1,4 +1,4 @@
-package akp69_lab10;
+package akp69_lab9;
 
 public class Staff extends Person {
 	private String school;
