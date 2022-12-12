@@ -207,26 +207,32 @@ public class MenuManagerGUI {
 
 				JTextArea entreeLabel = new JTextArea(selectedMenu.getEntree().getName() + "\n" + selectedMenu.getEntree().getDescription() +"\nCalories: "+ selectedMenu.getEntree().getCalories() +"\nPrice: $"+ selectedMenu.getEntree().getPrice(), 4, 4);
 				entreeLabel.setBounds(70, 20, 800,70);
+				entreeLabel.setEditable(false);
 				detailMenuManager.getContentPane().add(entreeLabel);
 
 				JTextArea sideLabel = new JTextArea(selectedMenu.getSide().getName() + "\n" + selectedMenu.getSide().getDescription() + "\nCalories: " + selectedMenu.getSide().getCalories() + "\nPrice: $" + selectedMenu.getSide().getPrice(), 3, 3);
 				sideLabel.setBounds(70,100, 800,70);
+				sideLabel.setEditable(false);
 				detailMenuManager.getContentPane().add(sideLabel);
 
 				JTextArea saladLabel = new JTextArea(selectedMenu.getSalad().getName() + "\n" + selectedMenu.getSalad().getDescription() + "\nCalories: " + selectedMenu.getSalad().getCalories() + "\nPrice: $" + selectedMenu.getSalad().getPrice(), 3, 3);
 				saladLabel.setBounds(70,180,800,70);
+				saladLabel.setEditable(false);
 				detailMenuManager.getContentPane().add(saladLabel);
 
 				JTextArea dessertLabel = new JTextArea(selectedMenu.getDessert().getName() + "\n" + selectedMenu.getDessert().getDescription() + "\nCalories: " + selectedMenu.getDessert().getCalories() + "\nPrice: $" + selectedMenu.getDessert().getPrice(), 3, 3);
 				dessertLabel.setBounds(70,260,800,70);
+				dessertLabel.setEditable(false);
 				detailMenuManager.getContentPane().add(dessertLabel);	
 
 				JTextArea caloriesLabel = new JTextArea(Integer.toString(selectedMenu.totalCalories()));
 				caloriesLabel.setBounds(120, 350, 60, 20);
+				caloriesLabel.setEditable(false);
 				detailMenuManager.getContentPane().add(caloriesLabel);
 
 				JTextArea priceLabel = new JTextArea("$" + Double.toString(selectedMenu.totalPrice()));
 				priceLabel.setBounds(100,425, 60, 20);
+				priceLabel.setEditable(false);
 				detailMenuManager.getContentPane().add(priceLabel);
 
 				detailMenuManager.setVisible(true);
@@ -255,7 +261,7 @@ public class MenuManagerGUI {
 					// model.getElementAt(i).writeMenus("data/writeMenu.txt", model.selectedMenu);
 					createdMenus.add(demoList.get(i));
 					// Only way my program will run
-					FileManager.writeMenus("/Users/akashpatel/eclipse-workspace/akp69_MenuManager_v4/src/akp69_MenuManager/data/writeMenu.txt", createdMenus);
+					FileManager.writeMenus("/Users/akashpatel/eclipse-workspace/akp69_MenuManager_v4/src/akp69_MenuManager/data/menus.txt", createdMenus);
 				}
 			}
 		});
