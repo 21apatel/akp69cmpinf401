@@ -254,7 +254,8 @@ public class MenuManagerGUI {
 				{
 					// model.getElementAt(i).writeMenus("data/writeMenu.txt", model.selectedMenu);
 					createdMenus.add(demoList.get(i));
-					FileManager.writeMenus("data/writeMenu.txt", createdMenus);
+					// Only way my program will run
+					FileManager.writeMenus("/Users/akashpatel/eclipse-workspace/akp69_MenuManager_v4/src/akp69_MenuManager/data/writeMenu.txt", createdMenus);
 				}
 			}
 		});
