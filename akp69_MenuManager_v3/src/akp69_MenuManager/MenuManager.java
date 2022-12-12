@@ -1,6 +1,11 @@
 package akp69_MenuManager;
 
 import java.util.ArrayList;
+/**
+ * Class MenuManager
+ * @author Akash Patel
+ * @created: 11/14/22
+ */
 
 public class MenuManager {
 	private ArrayList<Entree> entrees = new ArrayList<Entree>();
@@ -8,6 +13,10 @@ public class MenuManager {
 	private ArrayList<Salad>salads = new ArrayList<Salad>();
 	private ArrayList<Dessert> desserts = new ArrayList<Dessert>();
 
+	/**
+	 * Method MenuManager
+	 * @param dishesFile a String
+	 */
 	public MenuManager(String dishesFile) {
 		ArrayList<MenuItem> menuItems = FileManager.readItems(dishesFile);
 		for(int i = 0; i < menuItems.size(); i++) {
@@ -21,7 +30,11 @@ public class MenuManager {
 				desserts.add((Dessert)menuItems.get(i));
 		}
 	}
-
+	/**
+	 * Method randomMenu
+	 * @param name a String
+	 * @return randomMenu
+	 */
 	public Menu randomMenu(String name) {
 		Menu randomMenu = new Menu(name);
 
@@ -32,7 +45,13 @@ public class MenuManager {
 
 		return randomMenu;
 	}
-
+	
+	
+	/**
+	 * Method minCaloriesMenu
+	 * @param name a String
+	 * @return new Menu
+	 */
 	public Menu minCaloriesMenu(String name) {
 
 		int min = Integer.MAX_VALUE;
@@ -70,7 +89,12 @@ public class MenuManager {
 				salads.get(count[2]),
 				desserts.get(count[3]));
 	}
-
+	
+	/**
+	 * Method maxCaloriesMenu
+	 * @param name a String
+	 * @return new Menu
+	 */
 	public Menu maxCaloriesMenu (String name) {
 
 		int max = Integer.MIN_VALUE;

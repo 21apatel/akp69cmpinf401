@@ -14,9 +14,9 @@ public class FileManager {
 
 	public static ArrayList<MenuItem> readItems(String fileName){
 		ArrayList<MenuItem> item = new ArrayList<MenuItem>();
-		String path = "/Users/akashpatel/eclipse-workspace/akp69_MenuManager_v4/src/akp69_MenuManager/";
+		//String path = "/Users/akashpatel/eclipse-workspace/akp69_MenuManager_v4/src/akp69_MenuManager/";
 		try {
-			FileReader fr = new FileReader(path + fileName);
+			FileReader fr = new FileReader(fileName);
 			BufferedReader br = new BufferedReader(fr);
 			String line = null;
 			while((line = br.readLine()) != null) {
@@ -64,9 +64,9 @@ public class FileManager {
 	}
 
 	public static void writeMenus(String fileName, ArrayList<Menu> menus) {
-		String path = "/Users/akashpatel/eclipse-workspace/akp69_MenuManager_v4/src/akp69_MenuManager/";
+		//String path = "/Users/akashpatel/eclipse-workspace/akp69_MenuManager_v4/src/akp69_MenuManager/";
 		try {
-			FileWriter fw = new FileWriter(path + fileName);
+			FileWriter fw = new FileWriter(fileName);
 			BufferedWriter bw = new BufferedWriter(fw);
 			for(int i = 0; i < menus.size(); i++) {
 				bw.write(menus.get(i).getMenuName() + "\n" + menus.get(i).description() + "\nTotal Calories: " + menus.get(i).totalCalories() + "\nTotal Price " + menus.get(i).totalPrice());

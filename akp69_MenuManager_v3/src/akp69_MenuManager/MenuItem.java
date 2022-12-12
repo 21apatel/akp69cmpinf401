@@ -1,7 +1,11 @@
 package akp69_MenuManager;
 
 public class MenuItem {
-
+/**
+ * Class MenuItem
+ * @author Akash Patel
+ * @created 11/14/22
+ */
 	private String name;
 	private String description;
 	private int calories;
