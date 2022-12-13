@@ -53,7 +53,7 @@ public class MenuManagerGUI {
 		frmMenuManager.getContentPane().setLayout(null);
 		final int count = 0;
 
-		MenuManager menu = new MenuManager("/Users/akashpatel/eclipse-workspace/akp69_MenuManager_v4/src/akp69_MenuManager/data/dishes.txt");
+		MenuManager menu = new MenuManager("./src/akp69_MenuManager/data/dishes.txt");
 
 
 		DefaultListModel<Menu> demoList = new DefaultListModel<>();
@@ -261,7 +261,7 @@ public class MenuManagerGUI {
 					// model.getElementAt(i).writeMenus("data/writeMenu.txt", model.selectedMenu);
 					createdMenus.add(demoList.get(i));
 					// Only way my program will run
-					FileManager.writeMenus("/Users/akashpatel/eclipse-workspace/akp69_MenuManager_v4/src/akp69_MenuManager/data/menus.txt", createdMenus);
+					FileManager.writeMenus("./src/akp69_MenuManager/data/menus.txt", createdMenus);
 				}
 			}
 		});
